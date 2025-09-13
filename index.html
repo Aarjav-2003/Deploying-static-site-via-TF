@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansible & Terraform: An Introduction</title>
+    <!-- Tailwind CSS script for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for a cleaner look */
+        .header-bg {
+            background-image: linear-gradient(135deg, #1f2937 0%, #4b5563 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="header-bg text-white shadow-xl">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-2 md:mb-0">DevOps Essentials</h1>
+                <nav>
+                    <a href="#ansible" class="text-gray-200 hover:text-white mx-3 md:mx-4 font-medium transition-colors duration-300">Ansible</a>
+                    <a href="#terraform" class="text-gray-200 hover:text-white mx-3 md:mx-4 font-medium transition-colors duration-300">Terraform</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Introduction Section -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center text-gray-900">Introduction to Infrastructure as Code</h2>
+            <p class="text-lg text-gray-600 leading-relaxed text-center max-w-2xl mx-auto">
+                In modern software development, automating the setup and management of IT infrastructure is key. This concept, known as Infrastructure as Code (IaC), allows you to define and manage your infrastructure in text files, just like you manage your application code. This page introduces two of the most popular IaC tools: Ansible and Terraform.
+            </p>
+        </section>
+
+        <!-- Ansible Section -->
+        <section id="ansible" class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="w-full">
+                    <h2 class="text-3xl font-extrabold text-purple-600 mb-4">Ansible</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Ansible is an open-source automation tool for configuration management, application deployment, and task automation. It's known for being simple, powerful, and agentless, which means you don't need to install any special software on the machines you are managing.
+                    </p>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1 text-gray-900">What is it for?</h3>
+                            <ul class="list-disc list-inside text-gray-600 pl-4 space-y-1">
+                                <li><strong>Configuration Management:</strong> Ensuring servers are configured correctly and consistently.</li>
+                                <li><strong>Application Deployment:</strong> Automating the process of deploying applications to servers.</li>
+                                <li><strong>Orchestration:</strong> Coordinating complex tasks across multiple systems.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1 text-gray-900">Key Concepts</h3>
+                            <ul class="list-disc list-inside text-gray-600 pl-4 space-y-1">
+                                <li><strong>Playbooks:</strong> YAML files that describe the automation tasks.</li>
+                                <li><strong>Modules:</strong> Reusable units of code that perform specific tasks (e.g., installing a package, copying a file).</li>
+                                <li><strong>Roles:</strong> Structured sets of tasks, variables, and handlers.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1 text-gray-900">Why use Ansible?</h3>
+                            <ul class="list-disc list-inside text-gray-600 pl-4 space-y-1">
+                                <li><strong>Agentless:</strong> It uses SSH to connect to remote machines.</li>
+                                <li><strong>Simple Syntax:</strong> Playbooks are written in human-readable YAML.</li>
+                                <li><strong>Powerful:</strong> Can handle complex tasks and large-scale environments.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terraform Section -->
+        <section id="terraform" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="w-full">
+                    <h2 class="text-3xl font-extrabold text-cyan-600 mb-4">Terraform</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Terraform is an open-source tool for provisioning and managing cloud infrastructure. Unlike Ansible, which focuses on configuration management, Terraform is designed to define, launch, and manage resources like virtual machines, networks, and databases across various cloud providers.
+                    </p>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1 text-gray-900">What is it for?</h3>
+                            <ul class="list-disc list-inside text-gray-600 pl-4 space-y-1">
+                                <li><strong>Infrastructure Provisioning:</strong> Creating, modifying, and destroying cloud resources.</li>
+                                <li><strong>Multi-Cloud:</strong> Works with many providers like AWS, Azure, and Google Cloud.</li>
+                                <li><strong>State Management:</strong> Tracks the real-world state of your infrastructure.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1 text-gray-900">Key Concepts</h3>
+                            <ul class="list-disc list-inside text-gray-600 pl-4 space-y-1">
+                                <li><strong>Providers:</strong> Plugins for interacting with different cloud services.</li>
+                                <li><strong>Resources:</strong> Infrastructure components defined in your code (e.g., a virtual machine).</li>
+                                <li><strong>State File:</strong> A file that maps your code to real-world resources.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1 text-gray-900">Why use Terraform?</h3>
+                            <ul class="list-disc list-inside text-gray-600 pl-4 space-y-1">
+                                <li><strong>Declarative:</strong> You describe the desired end state, and Terraform figures out how to get there.</li>
+                                <li><strong>Immutable Infrastructure:</strong> It encourages creating new resources rather than modifying existing ones.</li>
+                                <li><strong>Dependency Graph:</strong> It understands the relationships between your resources.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 mt-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center text-gray-900">Ansible vs. Terraform</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div>
+                    <h3 class="font-bold text-xl text-purple-600 mb-2">Ansible</h3>
+                    <p class="text-gray-600">Primarily a **configuration management** tool. Focuses on *how* to configure a system after it's been provisioned.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl text-cyan-600 mb-2">Terraform</h3>
+                    <p class="text-gray-600">Primarily a **provisioning** tool. Focuses on *what* infrastructure to create.</p>
+                </div>
+            </div>
+            <p class="text-center text-lg mt-4 text-gray-600">They are often used together in a complete DevOps workflow.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="header-bg text-white text-center p-4 mt-8">
+        <p class="text-sm text-gray-400">Website built to educate on DevOps tools.</p>
+    </footer>
+
+</body>
+</html>
