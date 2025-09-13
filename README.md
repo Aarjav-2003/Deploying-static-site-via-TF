@@ -1,0 +1,1 @@
+# Deploying-static-site-via-TF
